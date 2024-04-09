@@ -25,7 +25,9 @@ the difference because basically the class which represents square does not have
 which represent rectangle , as squares and rectangle in math have.
 So be cautious here. Things which represent other things may not have same relation ship as the things itself.
 
-4. 
+4. Interface segregation principle - Kinda extention of interface segregation for inetrface. There should not be one
+fat interface. We should segregate them into smaller ones. Such that the classes which implement them should have
+all the functions implemented and not only some of them.
 
 Intro to design patterns, Classification
 1. Creational
