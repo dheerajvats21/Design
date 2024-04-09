@@ -7,6 +7,17 @@ INteface segregation - https://www.youtube.com/watch?v=-E-E6pd-psU
 Dep INversion - https://www.youtube.com/watch?v=_CQuOfIqaGE&t=1s
 
 
+Keep an eye on what recompiles when a thing changes. only things that make sense should recompile.
+
+1. Single Responsibility - One reason to change Like CEO, CFO, CTO triggered changes shouldnt be in same class as they can interfere with each other- bob matrin  and  concept and coding
+2. Open Close- Open for extention closed for modification. do not change/modify a class , extend it. You can only decouple according to what you know. but when you give to customer, new dimensions of chagnes come for which you have not decoupled, So its a good idea to give code to customer to use ASAP and then know the axis of changes for customer and then accordingly decouple them for changes for OCP.
+Mostly when this is not followed there are somewhere addition of code in switch statements on addition of class. 
+3. Liscovs Substitution principle - Derived classes MUST be usable through baseclass interface without the need for user to know the difference, i.e in code there should not be instance of to have multiple behaviors.
+E.g When we inherit square from rectangle. when we change width side also changes, and this may cause problem in some code where rectangle is used. So Square cannot be extended from rectangle and in future the code has to be change with if statement if (instanceof Square) . Which violates liscovs principle. As now user has to know the difference because basically the class which represents square does not have same relationship  with class which represent rectangle , as squares and rectangle in math have.
+So be cautious here. Things which represent other things may not have same relation ship as the things itself.
+
+4. 
+
 Intro to design patterns, Classification
 1. Creational
 2. structural
