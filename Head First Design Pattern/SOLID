@@ -4,7 +4,7 @@ OCP - https://www.youtube.com/watch?v=SodKv9n5Nro&t=40s
 SRP - https://www.youtube.com/watch?v=y7fhxZTqc3I
 Liscovs - https://www.youtube.com/watch?v=HbGDobtxzWk
 INteface segregation - https://www.youtube.com/watch?v=-E-E6pd-psU and https://www.youtube.com/watch?v=xahwVmf8itI
-Dep INversion - https://www.youtube.com/watch?v=_CQuOfIqaGE&t=1s
+Dep INversion - https://www.youtube.com/watch?v=_CQuOfIqaGE&t=1s and https://www.youtube.com/watch?v=S9awxA1wNNY
 
 
 Keep an eye on what recompiles when a thing changes. only things that make sense should recompile.
@@ -35,6 +35,12 @@ Sleeping , moving . And make IAnimal implement those. As IAnimal with 3 methods 
 are facouring composition over inheritance and decouplin over coupling. (kinda like microservices , instead of 
 monolith, we compose the applciation by creating many microservices). Now if other Species Like plants can
 also implement Eat(), Sleep(). So small roles can be given to make large composition.
+5. Dependency Inversion - Classes should not depend on classes i.e concretions. They should depend on abstractions.
+Whenever you see new keyword, We depending on a concreation. If no new keyword we are using abstractions and
+getting objects as inputs. So higher level modules should not depend on lower level modules they should depend 
+on abstractions. 
+Also dont make abstractions thinking of implementation. First create abstractions then implement them, So 
+Implementation should depend on abstractions not vice versa
 
 Intro to design patterns, Classification
 1. Creational
