@@ -3,7 +3,7 @@ Bob martin - https://www.youtube.com/watch?v=TMuno5RZNeE&t=3127s
 OCP - https://www.youtube.com/watch?v=SodKv9n5Nro&t=40s
 SRP - https://www.youtube.com/watch?v=y7fhxZTqc3I
 Liscovs - https://www.youtube.com/watch?v=HbGDobtxzWk
-INteface segregation - https://www.youtube.com/watch?v=-E-E6pd-psU
+INteface segregation - https://www.youtube.com/watch?v=-E-E6pd-psU and https://www.youtube.com/watch?v=xahwVmf8itI
 Dep INversion - https://www.youtube.com/watch?v=_CQuOfIqaGE&t=1s
 
 
@@ -27,7 +27,14 @@ So be cautious here. Things which represent other things may not have same relat
 
 4. Interface segregation principle - Kinda extention of interface segregation for inetrface. There should not be one
 fat interface. We should segregate them into smaller ones. Such that the classes which implement them should have
-all the functions implemented and not only some of them.
+all the functions implemented and not only some of them. Too many interfaces is better than too few. Rather
+than having many methods in one interface we can make many smaller interface with each having its own
+functionalities and make class implement those functionalities. E.g 
+IAnimals { Eat(), Sleep(), move () } rather than this AnimalInterface we should make 3 interfaces for Eating,
+Sleeping , moving . And make IAnimal implement those. As IAnimal with 3 methods is large monolithic animal. So we 
+are facouring composition over inheritance and decouplin over coupling. (kinda like microservices , instead of 
+monolith, we compose the applciation by creating many microservices). Now if other Species Like plants can
+also implement Eat(), Sleep(). So small roles can be given to make large composition.
 
 Intro to design patterns, Classification
 1. Creational
