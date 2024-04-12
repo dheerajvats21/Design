@@ -53,12 +53,12 @@ Intro to design patterns, Classification
 
 2. structural
     Adaptor
-    Bridge
-    composite
     Decorator
     Facade
-    Flyweight
     Proxy
+    Bridge
+    composite
+    Flyweight
 3. Behavioral
     Chain of responsibility
      Command
