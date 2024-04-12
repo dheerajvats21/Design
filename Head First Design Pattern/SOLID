@@ -45,5 +45,26 @@ Lecture - https://youtu.be/zHiWqnTWsn4?si=okmoMS0o2gFgHo59
 
 Intro to design patterns, Classification
 1. Creational
+    Singleton
+    Factory Method
+    Abstract Factory
+    Builder
+    Prototype
+
 2. structural
+    Adaptor
+    Bridge
+    composite
+    Decorator
+    Facade
+    Flyweight
+    Proxy
 3. Behavioral
+    Chain of responsibility
+     Command
+     Iterator
+      Mediator
+      Observer
+     State
+     Strategy
+     Visitor
