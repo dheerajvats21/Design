@@ -1,4 +1,18 @@
 Bob martin - https://www.youtube.com/watch?v=TMuno5RZNeE&t=3127s
+Why does code fail ?
+ 1. Rigidity - to change some thing you need to change lot more
+ 2. Fragility - change at one point creates problems of unrelated parts.
+Common to them - coupling
+Bulk of software design is managing dependencies
+Polymorphism - one variable can hold multiple types of things (functions in c, objects etc) - 
+What does polymorphism do - At compile type it reverses the control. Now low level modules depends
+on interface rather than high level modules. Which earlier use to import the lower level modules,
+but now imports interface. So gives ability of one module calling another and yet have cimpile time dependency
+point against the flow of control.
+
+With polimorphism , you can have absolute control over dependency structure. You can decide in which 
+direction dependency arrow should point. This is what OO is . OO is about managing dependencies by selectively
+inverting key dependencies in your architecture to prevent rigity , fragility, non reusability.
 
 OCP - https://www.youtube.com/watch?v=SodKv9n5Nro&t=40s
 SRP - https://www.youtube.com/watch?v=y7fhxZTqc3I
