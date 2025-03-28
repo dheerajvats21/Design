@@ -1,6 +1,7 @@
 Bob martin - https://www.youtube.com/watch?v=TMuno5RZNeE&t=3127s
 Why does code fail ?
- 1. Rigidity - to change some thing you need to change lot more
+ 1. Rigidity - to change some thing you need to change lot more (on change and 
+many things compile i.e higher level modules)
  2. Fragility - change at one point creates problems of unrelated parts.
 Common to them - coupling
 Bulk of software design is managing dependencies
