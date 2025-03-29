@@ -15,10 +15,10 @@ With polimorphism , you can have absolute control over dependency structure. You
 direction dependency arrow should point. This is what OO is . OO is about managing dependencies by selectively
 inverting key dependencies in your architecture to prevent rigity , fragility, non reusability.
 
-OCP - https://www.youtube.com/watch?v=SodKv9n5Nro&t=40s
-SRP - https://www.youtube.com/watch?v=y7fhxZTqc3I
-Liscovs - https://www.youtube.com/watch?v=HbGDobtxzWk
-INteface segregation - https://www.youtube.com/watch?v=-E-E6pd-psU and https://www.youtube.com/watch?v=xahwVmf8itI
+OCP - watch okhravi
+SRP - watch okhravi
+Liscovs - watch okhravi
+INteface segregation - okhravi
 Dep INversion - https://www.youtube.com/watch?v=_CQuOfIqaGE&t=1s and https://www.youtube.com/watch?v=S9awxA1wNNY
 
 
@@ -34,6 +34,11 @@ Mostly when this is not followed there are somewhere addition of code in switch 
 3. Liscovs Substitution principle - Derived classes MUST be usable through baseclass interface without the need
 for user to know the difference (i.e wherever there is base class used in programs it should be swappable 
 with subtype WITHOUT CAUSING ANY UNWANTED BEHAVIOR IN PROGRAM) . 
+
+This Consists of 3 type rules, 4 behavioral rules around pre condition postondition, single state and
+multi state invacriants 
+Robustness principle - be liberal in what you accept but coonservative in what you give.
+
 In code there should not be instanceof to have multiple behaviors. As this means user knows the difference.
 E.g When we inherit square from rectangle. when we change width side also changes, and this may cause problem 
 in some code where rectangle is used. So Square cannot be extended from rectangle and in future the code has to
@@ -42,7 +47,7 @@ the difference because basically the class which represents square does not have
 which represent rectangle , as squares and rectangle in math have.
 So be cautious here. Things which represent other things may not have same relation ship as the things itself.
 
-4. Interface segregation principle - Kinda extention of interface segregation for inetrface. There should not be one
+4. Interface segregation principle - There should not be one
 fat interface. We should segregate them into smaller ones. Such that the classes which implement them should have
 all the functions implemented and not only some of them. Too many interfaces is better than too few. Rather
 than having many methods in one interface we can make many smaller interface with each having its own
@@ -52,13 +57,14 @@ Sleeping , moving . And make IAnimal implement those. As IAnimal with 3 methods 
 are facouring composition over inheritance and decouplin over coupling. (kinda like microservices , instead of 
 monolith, we compose the applciation by creating many microservices). Now if other Species Like plants can
 also implement Eat(), Sleep(). So small roles can be given to make large composition.
-5. Dependency Inversion - Classes should not depend on classes i.e concretions. They should depend on abstractions.
-Whenever you see new keyword, We depending on a concreation. If no new keyword we are using abstractions and
-getting objects as inputs. So higher level modules should not depend on lower level modules they should depend 
-on abstractions. 
-Also dont make abstractions thinking of implementation. First create abstractions then implement them, So 
-Implementation should depend on abstractions not vice versa
+5. Dependency Inversion - 
+Formal - High level modules should not depend on low level modules(concretions) both should depend on abstractions. 
+Abstractions should not depend on details. Details should depend on abstractions
+Whenever you see new keyword, We depending on a concreation. If no new keyword we are using 
+abstractions and getting objects as inputs. Also dont make abstractions thinking of implementation. 
+First create abstractions then implement them, So Implementation should depend on abstractions not vice versa
 Lecture - https://youtu.be/zHiWqnTWsn4?si=okmoMS0o2gFgHo59
+
 
 Intro to design patterns, Classification
 1. Creational
