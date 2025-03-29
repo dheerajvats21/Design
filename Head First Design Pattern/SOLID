@@ -8,7 +8,7 @@ Bulk of software design is managing dependencies
 Polymorphism - one variable can hold multiple types of things (functions in c, objects etc) - 
 What does polymorphism do - At compile type it reverses the control. Now low level modules depends
 on interface rather than high level modules. Which earlier use to import the lower level modules,
-but now imports interface. So gives ability of one module calling another and yet have cimpile time dependency
+but now imports interface. So gives ability of one module calling another and yet have compile time dependency
 point against the flow of control.
 
 With polimorphism , you can have absolute control over dependency structure. You can decide in which 
@@ -32,7 +32,9 @@ come for which you have not decoupled, So its a good idea to give code to custom
 the axis of changes for customer and then accordingly decouple them for changes for OCP.
 Mostly when this is not followed there are somewhere addition of code in switch statements on addition of class. 
 3. Liscovs Substitution principle - Derived classes MUST be usable through baseclass interface without the need
-for user to know the difference, i.e in code there should not be instance of to have multiple behaviors.
+for user to know the difference (i.e wherever there is base class used in programs it should be swappable 
+with subtype WITHOUT CAUSING ANY UNWANTED BEHAVIOR IN PROGRAM) . 
+In code there should not be instanceof to have multiple behaviors. As this means user knows the difference.
 E.g When we inherit square from rectangle. when we change width side also changes, and this may cause problem 
 in some code where rectangle is used. So Square cannot be extended from rectangle and in future the code has to
 be change with if statement if (instanceof Square) . Which violates liscovs principle. As now user has to know 
