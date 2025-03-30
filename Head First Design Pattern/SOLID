@@ -76,7 +76,8 @@ Intro to design patterns, Classification
 
 2. structural
     Adaptor
-    Decorator
+    Decorator - Useful in Stream(Input, Buffered Input Stream, lineInputStream),
+                 Deprecating a class (Make decorator of the class and dont call the base component to depricate)
     Facade
     Proxy
     Bridge
