@@ -71,7 +71,7 @@ Intro to design patterns, Classification
     Singleton
     Factory Method
     Abstract Factory
-    Builder
+    Builder - when class has multipal optional params AND needs immutability. gives immutability.
     Prototype
 
 2. structural
