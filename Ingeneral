@@ -1,0 +1,2 @@
+https://www.youtube.com/watch?v=dJI2saoM5_k - circuit breaker - implemented as a proxy and the caller is decorated with circuit breaker using Resiliency4J for example.
+So the normal proxywithout cirxuit breaker is decorated with Resiliency4J i.e circuit breaker functionality
