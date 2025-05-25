@@ -1,3 +1,38 @@
 https://www.youtube.com/watch?v=bS2T3YTeFDc
 
 https://www.youtube.com/playlist?list=PLW82sqn6eVjsWF6MML0dt9gN5aU2GTmZ6
+
+CAse - multiple objects with common state
+So similar part can be taken out and only one object can be created for it to prevent memory
+
+Similar part - interinsic object - flyweight
+other part of total object - extrinsic state
+Context = Flyweight + extrinsic state
+
+Context (uniqueuestate, repeatingState) {
+  flyWeight = flyWeightFactory.get (repeatingState);
+   new Context(flyweight, uniqueState);
+   operation() {
+    flyWeight.operation(uniqueue)
+
+   }
+
+}
+
+flyWeightFactory {
+  Cache[] flyweight;
+   get() {
+    if (flyweightexists for repeatingSTate ) {
+      return ffrom cache
+    } else {
+        make , store and return 
+    }
+}
+
+  Flywieght{
+     operation(uniqueueState) {
+        ..do operation
+     }
+   }
+
+}
