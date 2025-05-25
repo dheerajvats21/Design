@@ -28,3 +28,4 @@ So
   ConcreteForms    ConcreteResources ---> Resource(Book, artist)
    (LongForm,
    shortform)
+
