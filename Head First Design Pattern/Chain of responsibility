@@ -1,2 +1,19 @@
 https://www.youtube.com/watch?v=oLt9ly8ZeRI&t=746s
 
+
+Situation - One operation can be viewed as steps of multiple smaller operations 
+  Step1
+   step2
+   step3
+
+Then if id o normally my class would keep on increasing / interface would keep on expanding
+
+
+So instead i make class depend on a class handler which internally has next Handler. So my client only needs Handler,
+which is not eexpanding now.
+
+Cleint -> Handler -> Handler -> Handler
+
+Diff with decorator
+In decoratr operation IS done on object, Here REQUEST is being passed to do an operation for request. Not 
+doing operation ON the objects. Purpose is to fulfil request, not DO AN OPERATION on the object.
