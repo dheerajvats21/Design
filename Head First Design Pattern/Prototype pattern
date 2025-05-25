@@ -8,4 +8,4 @@ parameters are private. would not be able to access them.
 
 When you want to clone objects and dont want to know internals of object we receive a PRototype type of object.
 This interface necessitates to implement clone method. So the responsibility of cloning is given to 
-object itself. and user of Prototype 
+object itself. and user of Prototype dont need to know the object , can just call clone()
