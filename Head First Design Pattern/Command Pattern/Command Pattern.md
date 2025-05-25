@@ -1,5 +1,5 @@
 # Command Pattern
-If my use case wants to run commands such that i want to decouple from the actual receiver of command/ the object on which action is performed. I will use command pattern to encapsulate commands , so that my client (who perform commands) does not depend on the receiver object (on which action is performed).
+If my use case wants to run commands such that i want to decouple from the actual receiver of command/ the object on which action is performed. I will use command pattern to encapsulate commands , so that my client (who perform commands) does not depend on the receiver object (on which action is performed). The command would have the reciever object to do operation on.
 
 Example - Remote app 4 buttons - can perform action on bulb, AC, TV etc. So the APP should not depend on directly the TV, AC, buld. I will make command objects and pass it as parameters to remote. Adn remote would just call command.operation();
 
