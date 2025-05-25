@@ -1,5 +1,9 @@
 # State Pattern
 
+Helps implement state machines, If you have a context that needs to have state. and then on an operation on state need to hange the context's state to different state, then Context can either first check what is the current state, know internals of it and then change state accordingly. But it would be ever expanding disobeying OCP. And it would also disobey SRP. So need to make a state who handles changeState(), the concern of change state is on state itself. 
+
+State -> changeState(). 
+
 ### Problem Statement
 
 Here’s the way a gumball machine needs to work. 
