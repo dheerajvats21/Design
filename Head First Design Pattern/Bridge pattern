@@ -5,3 +5,26 @@ Christopher Okhravi
 
 https://www.youtube.com/watch?v=F1YQ7YRjttI
 
+So if there is a situation that you have a templte that can be filled with a resource as far as resource gives you
+items to be put in template. 
+So if there are m templates and n resource. 
+Option 1 - You make firstTemplateFirstResourceClass, firstTemplateSecondResourceClass,
+    secondTemplateFirstResourceClass and so on to make m x n classes.
+Option 2 - you see the they can be decoupled, in every class you writing logic to get the thing or item to be 
+put into template , So you can parameterise it in template. You get a Resource object and call itemA(), itemB()... 
+and so on on that to fill the template. Then it can be any resource (first, second any).
+
+Example - There maybe different forms or page templates (in websites making sites). As far as you give them
+header(), footer(), dp() etc. theyt can fill the template. So you dont need to make Form1Book class and Form1Artist
+class. You can make Resources out of Book and Artist and pass those resources objects to Form class,
+it can use them to fill its details to return view(). 
+
+So 
+
+    IForm -------> IResource  
+     |              |
+     |              |
+     v              v
+  ConcreteForms    ConcreteResources ---> Resource(Book, artist)
+   (LongForm,
+   shortform)
