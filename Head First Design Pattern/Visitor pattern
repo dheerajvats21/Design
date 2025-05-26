@@ -2,3 +2,30 @@ https://www.youtube.com/watch?v=TXEq0hwHAjM
 https://www.youtube.com/watch?v=pL4mOUDi54o - UML
 
 https://www.youtube.com/watch?v=UQP5XqMqtqQ - UML diagram and ocrrect explanation
+So if you want to add more functionality to your your class in addition to methods it provides,
+you will have to add new methods to it. So you wil keep adding functionality. So not following SRP, and OCP.
+As you will keep on adding functionlities to the class. 
+So we can put different concerns for an object in different classes , and have class have its bare minimum.
+But out client ants to perform these functionalities on the objects. something like object1.operationA(), 
+object2.operationA().
+Example - users can be sent mails, message in phone numbers. these are separate logics, and we can add 
+sendMails, sendMessage in USe class. But not follow SRP and OCP. So we make different class for it , which should
+accept object to perform the function on. in a way that we call the method on object itself as client
+has objects not the different classes having the functionality.
+
+So we MAke interface 
+Visitor has methods visitA(), visitB()
+and element having method accept(Visitor v) - v.visitA(this);
+
+Concrete Visitor s would be EmailVisitor, MessageVisitor etc. 
+So now object can call its different additional functionalites given the right visitor,
+decoupling the additional functionalites from object. 
+Also decoupling client from which type of object needs that functionality. So client can have bunch of different
+concrete elements and calling same functionality for it. without bothering what type of object is it, as far as 
+it is an element. also same object can be called using differnt visitors awithout bothering what functionality
+the visitor is implementing as far as Visitor and element are compatible i.e elemtent has accept method
+for the visitor.
+
+So this way additional functionalities of classes can be implemented as separate visitor class,
+and same class can be used for different objects to do same type of concern.
+
