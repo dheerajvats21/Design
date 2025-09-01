@@ -60,7 +60,7 @@ The control plane is the “brain” of Kubernetes. It manages the overall clust
 
 Key Components:
 
-API Server (kube-apiserver)
+- API Server (kube-apiserver)
 
 Acts as the front door of Kubernetes.
 
@@ -68,7 +68,7 @@ Every request (from kubectl, controllers, nodes) goes through it.
 
 Validates & authenticates requests, updates cluster state in etcd.
 
-etcd
+- etcd
 
 A distributed key-value store.
 
@@ -76,7 +76,7 @@ Stores all cluster state (pods, deployments, configs, secrets).
 
 Highly available, consistent database → critical for Kubernetes.
 
-Controller Manager
+- Controller Manager
 
 Runs various controllers (loops) that watch actual state vs desired state.
 
@@ -84,7 +84,7 @@ Example: Deployment controller ensures the number of pods = replicas you asked f
 
 If a pod dies, controller spins up a replacement.
 
-Scheduler
+- Scheduler
 
 Decides which node runs a pod.
 
@@ -92,7 +92,7 @@ Looks at constraints: CPU, memory, taints/tolerations, affinities.
 
 Doesn’t start pods itself — just binds pods to nodes.
 
-Cloud Controller Manager (in cloud setups)
+- Cloud Controller Manager (in cloud setups)
 
 Integrates Kubernetes with cloud providers (AWS, GCP, Azure).
 
@@ -104,7 +104,7 @@ The data plane lives on the worker nodes. This is where actual workloads (pods/c
 
 Key Components:
 
-Kubelet
+- Kubelet
 
 Agent running on every node.
 
@@ -114,7 +114,7 @@ Ensures the containers defined in PodSpecs are actually running.
 
 Reports node + pod status back to API server.
 
-Kube-proxy
+- Kube-proxy
 
 Handles networking/routing inside the cluster.
 
@@ -122,7 +122,7 @@ Implements Services (ClusterIP, NodePort, LoadBalancer) by managing IP tables / 
 
 Ensures pods can reach each other and external clients can reach services.
 
-Container Runtime
+- Container Runtime
 
 Runs the containers (Docker, containerd, CRI-O).
 
@@ -132,21 +132,21 @@ Kubernetes is runtime-agnostic as long as it supports the CRI (Container Runtime
 
 Let’s say you apply a Deployment for 3 replicas of an app:
 
-kubectl apply -f deploy.yaml → goes to API Server.
+- kubectl apply -f deploy.yaml → goes to API Server.
 
-API Server writes desired state into etcd.
+- API Server writes desired state into etcd.
 
-Controller Manager sees: “Deployment needs 3 pods, but none exist.” → creates 3 Pod objects.
+- Controller Manager sees: “Deployment needs 3 pods, but none exist.” → creates 3 Pod objects.
 
-Scheduler picks nodes for those pods based on resources.
+- Scheduler picks nodes for those pods based on resources.
 
-Kubelet on each chosen node sees “I need to run this pod” → pulls container image, starts it via container runtime.
+- Kubelet on each chosen node sees “I need to run this pod” → pulls container image, starts it via container runtime.
 
-Kube-proxy ensures networking → pod gets a cluster IP, can talk to others.
+- Kube-proxy ensures networking → pod gets a cluster IP, can talk to others.
 
-If one pod dies, controller notices, asks for a new one → Scheduler assigns, Kubelet runs it.
+- If one pod dies, controller notices, asks for a new one → Scheduler assigns, Kubelet runs it.
 
-That’s how the control plane manages state, and the data plane executes it.
+- That’s how the control plane manages state, and the data plane executes it.
 
 🔹 4. Interview Insights
 
